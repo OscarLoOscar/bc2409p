@@ -3,9 +3,9 @@ package bc2409p;
 public class helloworld {
   public static void main(String[] args) {
     // VSCode short cut :
-    // ctrl + shift + k -> restart
-    // ctrl + s -> save
-    // ctrl + shift + f -> code拍齊對位
+    // ctrl/command + shift + k -> restart
+    // ctrl/command + s -> save
+    // ctrl/command + shift + f -> code拍齊對位
 
     String str = "";
     // System.out.println("str : " + str);
@@ -43,18 +43,18 @@ public class helloworld {
     System.out.println("i = " + i);
 
     // % >> 餘數
-    // int , double , String 
+    // int , double , String
     boolean b1 = true;
     boolean b2 = false;
 
-    // > , < , >= , <= 
-    boolean r1 = 10 > 3 ;
+    // > , < , >= , <=
+    boolean r1 = 10 > 3;
     System.out.println("r1 : " + r1);
     boolean r2 = 10 > 11;
     System.out.println("r2 : " + r2);
-    boolean r3 = 10 >= 10 ;
+    boolean r3 = 10 >= 10;
     System.out.println("r3 : " + r3);
-    boolean r4= 10 <= 10;
+    boolean r4 = 10 <= 10;
     System.out.println("r4 : " + r4);
 
   }
