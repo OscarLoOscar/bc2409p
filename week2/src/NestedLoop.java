@@ -37,7 +37,7 @@ public class NestedLoop {
     // String
     // String method : length() , substring() , charAt(), equals() , indexOf()
 
-    String str1 = "abc";
+    String str1 = "abca";
     System.out.println("substring A : " + str1.substring(0));// abc
     System.out.println("substring B : " + str1.substring(1));// bc
     System.out.println("substring C : " + str1.substring(0, 2)); // ab , endIndex - 1
@@ -46,7 +46,19 @@ public class NestedLoop {
     String str2 = str1.substring(1); // bc
     String str3 = str1.substring(1, 3); // bc
     System.out.println("equals : " + str2.equals(str3)); // check value
-    //System.out.println("don't do that  : " + str2 == str3);
+    // System.out.println("don't do that : " + str2 == str3);
+
+    int int1 = str1.indexOf("a");
+    System.out.println("result of indexOf(\"a\") : " + int1) ; // indexOf -> find the first index of the String 
+    int int2 = str1.indexOf("b");
+    System.out.println("result of indexOf(\"b\") : " + int2) ;
+    int int3 = str1.indexOf("c");
+    System.out.println("result of indexOf(\"c\") : " + int3) ;
+    int int4 = str1.indexOf("d");
+    System.out.println("result of indexOf(\"d\") : " + int4) ;
+    int int5 = str1.indexOf(1);
+    System.out.println("result of indexOf(\"d\") : " + int5) ;
+
 
     // if(condition is true ){ // 括號後面無 ;
     // do something
