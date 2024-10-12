@@ -28,6 +28,22 @@ public class NestedLoop {
     // *** -> i = 2
     // ** -> i = 3
     // * -> i = 4
+    // use Nested Loop
+
+    // 19/10 開估
+
+    // Must
+    // primitive
+    // String
+    // String method : length() , substring() , charAt(), equals() , indexOf()
+    // if(condition is true ){ // 括號後面無 ; 
+    // do something
+    // }
+
+    // Optional
+    // for-loop -> for(int i = 0 ; i < 100 ; i++){ //括號後面無 ; 
+    // }
+    // Nested-loop
 
   }
 }
