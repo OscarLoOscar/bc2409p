@@ -36,12 +36,24 @@ public class NestedLoop {
     // primitive
     // String
     // String method : length() , substring() , charAt(), equals() , indexOf()
-    // if(condition is true ){ // 括號後面無 ; 
+
+    String str1 = "abc";
+    System.out.println("substring A : " + str1.substring(0));// abc
+    System.out.println("substring B : " + str1.substring(1));// bc
+    System.out.println("substring C : " + str1.substring(0, 2)); // ab , endIndex - 1
+    System.out.println("substring D : " + str1.substring(1, 3)); // bc ,endIndex - 1
+
+    String str2 = str1.substring(1); // bc
+    String str3 = str1.substring(1, 3); // bc
+    System.out.println("equals : " + str2.equals(str3)); // check value
+    //System.out.println("don't do that  : " + str2 == str3);
+
+    // if(condition is true ){ // 括號後面無 ;
     // do something
     // }
 
     // Optional
-    // for-loop -> for(int i = 0 ; i < 100 ; i++){ //括號後面無 ; 
+    // for-loop -> for(int i = 0 ; i < 100 ; i++){ //括號後面無 ;
     // }
     // Nested-loop
 
