@@ -48,6 +48,7 @@ public class DemoIf {
     System.out.println("case 5 : " + str5.compareTo(str5));
     System.out.println("case 6 : " + str5.compareTo(str6));
     System.out.println("case 7 : " + str5.compareTo(str7));// -6 -> why ?
+    System.out.println(str5.charAt(0)-str7.charAt(0));
     System.out.println("case 8 : " + str5.compareTo(str8));// -17 -> why?
     System.out.println("case 9 : " + str8.compareTo(str5));// 17 -> why?
 
