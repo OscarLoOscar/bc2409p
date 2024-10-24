@@ -212,5 +212,13 @@ public class MondayExercise {
       arr6[i] = arr5[arr5.length - i - 1];
     }
     System.out.println("Exercise 10 : " + Arrays.toString(arr6));
+
+    // Approach 2 of Exercise 10
+    for (int i = 0; i < arr5.length / 2; i++) {
+      String temp = arr5[i];
+      arr5[i] = arr5[arr5.length - i - 1];
+      arr5[arr5.length - i - 1] = temp;
+    }
+    System.out.println("Approach 2 of Exercise 10 : " + Arrays.toString(arr5));
   }
 }
