@@ -18,6 +18,7 @@ public class App4 {
           System.out.print("*");
         }
       }
+
     }
     //                   *
     //  ********************
@@ -28,4 +29,6 @@ public class App4 {
   //  *****
   //   ***
   //    *
+
+  
   }
