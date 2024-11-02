@@ -69,9 +69,9 @@ public class Receipt {
 
     // Order[] orderList = new Order[] {order1, order2, order3, order1, order1};
     Order[] orderList = new Order[5];
-
     Receipt receipt1 = new Receipt();
     receipt1.setOrders(orderList);
+    
     receipt1.addOrder(order1);
 
    // System.out.println("Receipt Total price " + receipt1.getTotalPrice());
