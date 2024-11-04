@@ -1,2 +1,36 @@
-.vscode
-.CheckAns_BC2409p.java
+# Ignore specific file
+CheckAns_BC2409p.java
+
+# Ignore all class files
+*.class
+
+# Ignore all log files
+*.log
+
+# Ignore build directories
+/build/
+/out/
+/target/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Maven/Gradle dependencies
+/.mvn/
+/.gradle/
+/build/
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore compiled Java binaries (optional)
+*.jar
+*.war
+*.ear
