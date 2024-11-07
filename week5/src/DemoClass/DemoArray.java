@@ -30,7 +30,7 @@ public class DemoArray {
       if (this.array[i] == num && !removed) {
         removed = true;
         continue;
-      }
+      } 
       if (index < newArr.length) {
         newArr[index++] = this.array[i];
       }
