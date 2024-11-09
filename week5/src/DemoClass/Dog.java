@@ -9,9 +9,22 @@ public class Dog {
 
   }
 
-  // Arguement Constructor
+  // All Argument Constructor
   public Dog(String name, int age) {
     this.name = name;
+    this.age = age;
+  }
+
+  // Argument Constructor
+  public Dog(String name) {
+    this.name = name;
+    this.age = 1;
+  }
+
+  // Argument Constructor
+  public Dog(int age) {
+    this.name = "null";
+    // this.name = null;
     this.age = age;
   }
 
@@ -38,7 +51,9 @@ public class Dog {
     d1.setName("ABC");
 
     Dog d2 = new Dog("BCD", 2);
-    System.out.println(d2.getAge() +" "+ d2.getName());
+    // System.out.println(d2.getAge() +" "+ d2.getName());
 
+    Dog d3 = new Dog(10);
+    System.out.println(d3.getName().toUpperCase()); // null.toUpperCase() -> Exception
   }
 }
