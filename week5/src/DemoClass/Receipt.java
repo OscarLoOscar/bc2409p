@@ -1,7 +1,5 @@
 package DemoClass;
 
-import java.util.Arrays;
-
 public class Receipt {
   private Order[] orders;
 
