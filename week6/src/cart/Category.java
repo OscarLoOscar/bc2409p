@@ -11,5 +11,5 @@ public abstract class Category extends Product {
   public String getCategory() {
     return this.category;
   }
-  
+
 }

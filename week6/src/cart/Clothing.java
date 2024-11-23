@@ -5,8 +5,10 @@ public class Clothing extends Item {
   private String size;
   private String material;
 
-  public Clothing(String name, double price, String category, String subCategory, String size, String material) {
+  public Clothing(String name, double price, String category,
+      String subCategory, String size, String material) {
     super(name, price, size, material);
+   // super();
     this.size = size;
     this.material = material;
   }
