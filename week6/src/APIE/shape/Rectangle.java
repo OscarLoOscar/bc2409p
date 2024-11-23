@@ -1,6 +1,6 @@
 package APIE.shape;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
 
   @Override
   void draw() {
@@ -8,14 +8,14 @@ public class Rectangle extends Shape{
   }
 
   @Override
-  void color(){
+  void color() {
     System.out.println("This Rectangle has a color.");
   }
-  
+
   public static void main(String[] args) {
     Rectangle r1 = new Rectangle();
-    r1.color();//This Shape has a color.
-    //after Override , print : This Rectangle has a color.
+    r1.color();// This Shape has a color.
+    // after Override , print : This Rectangle has a color.
   }
-  
+
 }
