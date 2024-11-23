@@ -24,8 +24,8 @@ public class Bank {
     System.out.println(a2);// [Account Number : null , Client Name : StandardName StandardLastName , Account Type : StandardClass] , Coupon Number : 0
     StandardClass a4 = (StandardClass) a2;
    // a2.setCoupon(Long.parseLong("10"));// The method setCoupon(long) is undefined for the type Account
-   // a4.setCoupon(Long.parseLong("10"));// The method setCoupon(long) is undefined for the type Account
-    
+   // a4.setCoupon(Long.parseLong("10"));
+   
     StandardClass a3 = new StandardClass("StandardName", "StandardLastName",
         10000.0, Long.parseLong("0"));
     System.out.println(a3);// [Account Number : null , Client Name : StandardName StandardLastName , Account Type : StandardClass] , Coupon Number : 0
