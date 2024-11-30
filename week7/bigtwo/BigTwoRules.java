@@ -14,7 +14,7 @@ public class BigTwoRules {
             card[1].getRank() == card[2].getRank());
   }
 
-  private static boolean isStraight(Card[] card) {
+  private static boolean isStraight(Card[] card) { // 蛇
     if (card.length != 5)
       return false;
     // sorting first
@@ -33,6 +33,22 @@ public class BigTwoRules {
         return false;
     }
     return true;
+  }
+
+  private static boolean isFlush(Card[] card) { // 同花順
+    if (card.length != 5)
+      return false;
+    if (isStraight(card) == true) {
+      char suit1 = card[0].getSuit();
+      char suit2 = card[1].getSuit();
+      char suit3 = card[2].getSuit();
+      char suit4 = card[3].getSuit();
+      char suit5 = card[4].getSuit();
+
+      return suit1 == suit2 && suit3 == suit4 && suit1 == suit5
+          && suit1 == suit4;
+    }
+    return false;
   }
 
   private static int convertRankToNumber(Card card) {
@@ -95,7 +111,7 @@ public class BigTwoRules {
         new Card('5', '♡'), //
         new Card('6', '♢'), //
         new Card('7', '♣'),};
-    //System.out.println("isStraight : " + isStraight(straightCards));
+    // System.out.println("isStraight : " + isStraight(straightCards));
 
     Card[] straightCards2 = {//
         new Card('A', '♠'), //
@@ -113,6 +129,47 @@ public class BigTwoRules {
         new Card('6', '♢'), //
         new Card('7', '♣'),};
     System.out.println("isStraightCards3 : " + isStraight(straightCards3));
+
+    // isFlush
+    Card[] flushCards1 = {//
+        new Card('A', '♠'), //
+        new Card('3', '♠'), //
+        new Card('4', '♠'), //
+        new Card('6', '♠'), //
+        new Card('7', '♠'),};
+    System.out.println("isFlushCards1 : " + isFlush(flushCards1));
+
+    Card[] flushCards2 = {//
+        new Card('A', '♠'), //
+        new Card('2', '♠'), //
+        new Card('3', '♠'), //
+        new Card('4', '♠'), //
+        new Card('5', '♠'),};
+    System.out.println("isFlushCards2 : " + isFlush(flushCards2));
+
+    Card[] flushCards3 = {//
+        new Card('T', '♠'), //
+        new Card('K', '♠'), //
+        new Card('J', '♠'), //
+        new Card('Q', '♠'), //
+        new Card('A', '♠'),};
+    System.out.println("isFlushCards3 : " + isFlush(flushCards3));
+
+    Card[] flushCards4 = {//
+      new Card('T', '♠'), //
+      new Card('K', '♠'), //
+      new Card('J', '♠'), //
+      new Card('Q', '♠'), //
+      new Card('A', '♡'),};
+  System.out.println("isFlushCards4 : " + isFlush(flushCards4));
+
+  Card[] flushCards5 = {//
+    new Card('T', '♠'), //
+    new Card('K', '♠'), //
+    new Card('J', '♠'), //
+    new Card('Q', '♠'), //
+    new Card('A', '2'),};
+System.out.println("isFlushCards5 : " + isFlush(flushCards5));
 
   }
 }
