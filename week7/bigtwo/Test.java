@@ -8,5 +8,6 @@ public class Test {
 
     System.out.println(c1.hashCode()); // 3044 (calculated by rank & suit)
     System.out.println(c2.hashCode()); // 3044 (calculated by rank & suit)
+
   }
 }

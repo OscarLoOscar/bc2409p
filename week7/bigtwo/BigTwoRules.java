@@ -35,7 +35,7 @@ public class BigTwoRules {
     return true;
   }
 
-  private static boolean isFlush(Card[] card) { // 同花順
+  private static boolean isFlush(Card[] card) { // 花
     if (card.length != 5)
       return false;
     if (isStraight(card) == true) {
@@ -49,6 +49,30 @@ public class BigTwoRules {
           && suit1 == suit4;
     }
     return false;
+  }
+
+  private static boolean isFullHouse(Card[] card) {
+    if (card.length != 5)
+      return false;
+    bubbleSortCard(card);
+
+    boolean condition1 = (card[0].getRank() == card[1].getRank() && //
+        card[1].getRank() == card[2].getRank() && //
+        card[3].getRank() == card[4].getRank());
+
+    boolean condition2 = (card[0].getRank() == card[1].getRank() && //
+        card[2].getRank() == card[3].getRank() && //
+        card[3].getRank() == card[4].getRank());
+
+    return condition1 || condition2;
+  }
+
+  private static boolean isFourOfAKind(Card[] card){
+    return false;
+  }
+
+  private static boolean isStraightAndFlush(Card[] card){
+    return isStraight(card) && isFlush(card);
   }
 
   private static int convertRankToNumber(Card card) {
@@ -111,7 +135,7 @@ public class BigTwoRules {
         new Card('5', '♡'), //
         new Card('6', '♢'), //
         new Card('7', '♣'),};
-    // System.out.println("isStraight : " + isStraight(straightCards));
+     System.out.println("isStraight : " + isStraight(straightCards));
 
     Card[] straightCards2 = {//
         new Card('A', '♠'), //
@@ -132,16 +156,16 @@ public class BigTwoRules {
 
     // isFlush
     Card[] flushCards1 = {//
-        new Card('A', '♠'), //
-        new Card('3', '♠'), //
-        new Card('4', '♠'), //
-        new Card('6', '♠'), //
-        new Card('7', '♠'),};
+        new Card('A', '♡'), //
+        new Card('3', '♡'), //
+        new Card('4', '♡'), //
+        new Card('6', '♡'), //
+        new Card('7', '♡'),};
     System.out.println("isFlushCards1 : " + isFlush(flushCards1));
 
     Card[] flushCards2 = {//
-        new Card('A', '♠'), //
-        new Card('2', '♠'), //
+        new Card('A', '♡'), //
+        new Card('2', '♡'), //
         new Card('3', '♠'), //
         new Card('4', '♠'), //
         new Card('5', '♠'),};
@@ -156,20 +180,53 @@ public class BigTwoRules {
     System.out.println("isFlushCards3 : " + isFlush(flushCards3));
 
     Card[] flushCards4 = {//
-      new Card('T', '♠'), //
-      new Card('K', '♠'), //
-      new Card('J', '♠'), //
-      new Card('Q', '♠'), //
-      new Card('A', '♡'),};
-  System.out.println("isFlushCards4 : " + isFlush(flushCards4));
+        new Card('T', '♡'), //
+        new Card('K', '♡'), //
+        new Card('J', '♡'), //
+        new Card('Q', '♡'), //
+        new Card('A', '♡'),};
+    System.out.println("isFlushCards4 : " + isFlush(flushCards4));
 
-  Card[] flushCards5 = {//
-    new Card('T', '♠'), //
-    new Card('K', '♠'), //
-    new Card('J', '♠'), //
-    new Card('Q', '♠'), //
-    new Card('A', '2'),};
-System.out.println("isFlushCards5 : " + isFlush(flushCards5));
+    Card[] flushCards5 = {//
+        new Card('T', '♠'), //
+        new Card('K', '♠'), //
+        new Card('J', '♠'), //
+        new Card('Q', '♠'), //
+        new Card('A', '2'),};
+    System.out.println("isFlushCards5 : " + isFlush(flushCards5));
 
+    Card[] fullHouse1 = {//
+        new Card('A', '♠'), //
+        new Card('A', '♡'), //
+        new Card('A', '♢'), //
+        new Card('K', '♣'), //
+        new Card('K', '♠')//
+    };
+    System.out.println("isFullHouse (AAA-KK): " + isFullHouse(fullHouse1)); // true
+
+    Card[] fullHouse2 = {//
+        new Card('Q', '♠'), //
+        new Card('Q', '♡'), //
+        new Card('T', '♢'), //
+        new Card('T', '♣'), //
+        new Card('T', '♠')//
+    };
+    System.out.println("isFullHouse (QQ-TTT): " + isFullHouse(fullHouse2)); // true
+
+    Card[] notFullHouse = {new Card('Q', '♠'), //
+        new Card('Q', '♡'), //
+        new Card('4', '♢'), //
+        new Card('4', '♣'), //
+        new Card('5', '♠')//
+    };
+    System.out.println("isFullHouse (QQ-44-5): " + isFullHouse(notFullHouse)); // false
+
+    Card[] uniqueCards = {//
+        new Card('A', '♠'), //
+        new Card('2', '♡'), //
+        new Card('3', '♢'), //
+        new Card('4', '♣'), //
+        new Card('5', '♠')};//
+    System.out.println("isFullHouse (A-2-3-4-5): " + isFullHouse(uniqueCards)); // false
   }
 }
